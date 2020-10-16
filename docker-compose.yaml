@@ -2,7 +2,9 @@ version: "3.8"
 
 services:
   wordpress:
-    image: wordpress:5.5-php7.4-apache
+    build:
+      context: ./wordpress
+    image: wordpress-dev
     depends_on:
       - db
     ports:
